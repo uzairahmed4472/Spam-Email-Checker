@@ -27,8 +27,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Get current directory
 sys.path.append(BASE_DIR)                              # Add to Python path for imports
 
 PROJ_ROOT = os.path.dirname(BASE_DIR)                  # Get project root directory
-DATA_PATH = os.path.join(PROJ_ROOT, "data", "processed.csv")  # Path to processed data
-ART_DIR = os.path.join(PROJ_ROOT, "artifacts")         # Directory for saving model artifacts
+DATA_PATH = os.path.join(BASE_DIR, "data", "processed.csv")  # Path to processed data (in current directory)
+ART_DIR = os.path.join(BASE_DIR, "artifacts")          # Directory for saving model artifacts (in current directory)
 os.makedirs(ART_DIR, exist_ok=True)                    # Create artifacts directory if it doesn't exist
 
 # Define paths for saving trained model components

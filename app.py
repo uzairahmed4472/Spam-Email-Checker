@@ -22,7 +22,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Define paths to saved model artifacts (created during training)
-ART_DIR = os.path.join(PROJ_ROOT, "artifacts")                    # Directory containing model files
+ART_DIR = os.path.join(BASE_DIR, "artifacts")                     # Directory containing model files (in current directory)
 MODEL_PATH = os.path.join(ART_DIR, "spam_model.keras")           # Path to trained neural network model
 TOK_PATH = os.path.join(ART_DIR, "tokenizer.pkl")                # Path to text tokenizer
 CFG_PATH = os.path.join(ART_DIR, "config.json")                  # Path to configuration file
